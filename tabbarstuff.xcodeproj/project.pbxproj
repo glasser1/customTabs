@@ -22,6 +22,9 @@
 		7831228218835A6C009FD251 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831226118835A6C009FD251 /* UIKit.framework */; };
 		7831228A18835A6C009FD251 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7831228818835A6C009FD251 /* InfoPlist.strings */; };
 		7831228C18835A6C009FD251 /* tabbarstuffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7831228B18835A6C009FD251 /* tabbarstuffTests.m */; };
+		7831229818835D45009FD251 /* tabBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831229618835D45009FD251 /* tabBarBackground.png */; };
+		7831229A188360BF009FD251 /* tabBarSelectedItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 78312299188360BF009FD251 /* tabBarSelectedItem.png */; };
+		7831229C18836376009FD251 /* friends2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831229B18836376009FD251 /* friends2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		7831228718835A6C009FD251 /* tabbarstuffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tabbarstuffTests-Info.plist"; sourceTree = "<group>"; };
 		7831228918835A6C009FD251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7831228B18835A6C009FD251 /* tabbarstuffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbarstuffTests.m; sourceTree = "<group>"; };
+		7831229618835D45009FD251 /* tabBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarBackground.png; sourceTree = "<group>"; };
+		78312299188360BF009FD251 /* tabBarSelectedItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarSelectedItem.png; sourceTree = "<group>"; };
+		7831229B18836376009FD251 /* friends2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 		7831226318835A6C009FD251 /* tabbarstuff */ = {
 			isa = PBXGroup;
 			children = (
+				78312299188360BF009FD251 /* tabBarSelectedItem.png */,
+				7831229B18836376009FD251 /* friends2.png */,
+				7831229618835D45009FD251 /* tabBarBackground.png */,
 				7831226C18835A6C009FD251 /* AppDelegate.h */,
 				7831226D18835A6C009FD251 /* AppDelegate.m */,
 				7831226F18835A6C009FD251 /* Main_iPhone.storyboard */,
@@ -232,9 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7831227418835A6C009FD251 /* Main_iPad.storyboard in Resources */,
+				7831229A188360BF009FD251 /* tabBarSelectedItem.png in Resources */,
 				7831227918835A6C009FD251 /* Images.xcassets in Resources */,
 				7831227118835A6C009FD251 /* Main_iPhone.storyboard in Resources */,
 				7831226818835A6C009FD251 /* InfoPlist.strings in Resources */,
+				7831229818835D45009FD251 /* tabBarBackground.png in Resources */,
+				7831229C18836376009FD251 /* friends2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
