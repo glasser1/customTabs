@@ -7,6 +7,7 @@
 //
 
 #import "FriendImageViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface FriendImageViewController ()
 
@@ -38,6 +39,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getFriendsInfo{
+    FBRequest* friendsRequest = [FBRequest requestForMyFriends];
+    [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
+                                                  NSDictionary* result,
+                                                  NSError *error) {
+        NSArray* friends = [result objectForKey:@"data"];
+        NSLog(@"Found: %i friends", friends.count);
+        /*
+         for (NSDictionary<FBGraphUser>* friend in friends) {
+            NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
+        }
+         */
+    }];
 }
 
 #pragma mark - Table view data source

@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     
+    
     FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info"]];
     // Align the button in the center horizontally
     loginView.delegate = self;
@@ -35,32 +36,21 @@
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
+    self.profilePictureView.profileID = user.id;
     self.nameLabel.text = user.name;
     
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    self.statusLabel.text = @"You're logged in";
-    
-    
-    FBRequest* friendsRequest = [FBRequest requestForMyFriends];
-    [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
-                                                  NSDictionary* result,
-                                                  NSError *error) {
-        NSArray* friends = [result objectForKey:@"data"];
-        NSLog(@"Found: %i friends", friends.count);
-         for (NSDictionary<FBGraphUser>* friend in friends) {
-         NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
-         }
-    }];
-    
+    self.statusLabel.text = @"You're logged in as";
     
 }
 
 // Implement the loginViewShowingLoggedOutUser: delegate method to modify your app's UI for a logged-out user experience
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     self.nameLabel.text = @"";
-    self.statusLabel.text= @"You're not logged in!";
+    self.statusLabel.text= @"You're not logged in";
+    self.profilePictureView.profileID = nil;
 }
 
 
