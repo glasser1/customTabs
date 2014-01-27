@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "friendsViewController.h"
 
 
 @interface ViewController (){

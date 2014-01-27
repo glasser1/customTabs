@@ -1,18 +1,18 @@
 //
-//  friendsViewController.m
+//  FriendImageViewController.m
 //  tabbarstuff
 //
-//  Created by itadmin on 1/20/14.
+//  Created by itadmin on 1/26/14.
 //  Copyright (c) 2014 itadmin. All rights reserved.
 //
 
-#import "friendsViewController.h"
+#import "FriendImageViewController.h"
 
-@interface friendsViewController ()
+@interface FriendImageViewController ()
 
 @end
 
-@implementation friendsViewController
+@implementation FriendImageViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
