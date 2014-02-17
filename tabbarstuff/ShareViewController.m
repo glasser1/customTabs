@@ -28,11 +28,11 @@
         
         // Check if the Facebook app is installed and we can present the share dialog
         FBShareDialogParams *params = [[FBShareDialogParams alloc] init];
-        params.link = [NSURL URLWithString:@"https://developers.facebook.com/docs/ios/share/"];
-        params.name = @"Sharing Tutorial";
-        params.caption = @"Build great social apps and get more installs.";
+        params.link = [NSURL URLWithString:@"http://linktoappsomehow.com"];
+        params.name = @"I just completed a run using Piste+Off!";
+        params.caption = @"Join Piste+Off and receive special offers for doing what you love.";
         params.picture = [NSURL URLWithString:@"http://i.imgur.com/g3Qc1HN.png"];
-        params.description = @"Allow your users to share stories on Facebook from your app using the iOS SDK.";
+        params.description = [NSString stringWithFormat:@"I just climbed %d feet!", 10];//nScore];
         
         
         // If the Facebook app is installed and we can present the share dialog
@@ -62,10 +62,10 @@
             
             // Put together the dialog parameters
             NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                           @"My New App", @"name",
-                                           @"Learning to integrate Facebook into my iOS apps.", @"caption",
-                                           @"My app doesn't do anything yet!  Hurray.", @"description",
-                                           @"http://www.marshall.edu", @"link",
+                                           @"I just completed a run using Piste+Off!", @"name",
+                                           @"Join Piste+Off and receive special offers for doing what you love.", @"caption",
+                                           [NSString stringWithFormat:@"I just climbed %d feet!", 10], @"description",
+                                           @"http://www.linktositeordownload.com", @"link",
                                            @"http://i.imgur.com/g3Qc1HN.png", @"picture",
                                            nil];
             

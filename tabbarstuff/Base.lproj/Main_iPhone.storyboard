@@ -86,14 +86,21 @@
                                     <action selector="share:" destination="hZJ-e5-Q13" eventType="touchUpInside" id="wkG-Ow-aHh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GK-Ct-X9x">
-                                <rect key="frame" x="85" y="426" width="149" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcD-6Q-3zx">
+                                <rect key="frame" x="85" y="421" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Friendlist with images">
+                                <state key="normal" title="make a friend request">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93S-e3-at2">
+                                <rect key="frame" x="86" y="421" width="149" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="make a friend request">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="euT-bm-HHT" kind="push" id="Y8G-1v-TeQ"/>
+                                    <segue destination="3IW-dt-7Ho" kind="push" id="tbc-P4-YFR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,34 +112,32 @@
             </objects>
             <point key="canvasLocation" x="229" y="-261"/>
         </scene>
-        <!--Friend Image View Controller-->
-        <scene sceneID="jNZ-qC-3kH">
+        <!--Request View Controller-->
+        <scene sceneID="Xy0-U8-kP7">
             <objects>
-                <tableViewController id="euT-bm-HHT" customClass="FriendImageViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ld9-hD-FB3">
+                <viewController id="3IW-dt-7Ho" customClass="requestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s2m-YB-X6v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bg5-xi-hvA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dkX-FS-Wa7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dxy-Bo-OB3">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dxy-Bo-OB3" id="Tta-i1-4mp">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="euT-bm-HHT" id="tyi-aC-WmG"/>
-                            <outlet property="delegate" destination="euT-bm-HHT" id="laa-pf-jTx"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="uOY-6c-wOY"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ltu-KM-uzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="this should make a request to eric" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-Ri-cBd">
+                                <rect key="frame" x="30" y="164" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GqP-WM-IQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z30-5Y-9L6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="-261"/>
+            <point key="canvasLocation" x="628" y="-260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Khy-Bg-Ghh">

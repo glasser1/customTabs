@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7819E63118B19EC6001791A2 /* requestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7819E63018B19EC6001791A2 /* requestViewController.m */; };
 		7831225E18835A6C009FD251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831225D18835A6C009FD251 /* Foundation.framework */; };
 		7831226018835A6C009FD251 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831225F18835A6C009FD251 /* CoreGraphics.framework */; };
 		7831226218835A6C009FD251 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831226118835A6C009FD251 /* UIKit.framework */; };
@@ -24,7 +25,6 @@
 		7831228C18835A6C009FD251 /* tabbarstuffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7831228B18835A6C009FD251 /* tabbarstuffTests.m */; };
 		7885ECF4188DFB9100CAC1EA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */; };
 		78AEA9121895FB850088AE3A /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AEA9111895FB850088AE3A /* ShareViewController.m */; };
-		78AEA915189602B30088AE3A /* FriendImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AEA914189602B30088AE3A /* FriendImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7819E62F18B19EC6001791A2 /* requestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requestViewController.h; sourceTree = "<group>"; };
+		7819E63018B19EC6001791A2 /* requestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requestViewController.m; sourceTree = "<group>"; };
 		7831225A18835A6C009FD251 /* tabbarstuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabbarstuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7831225D18835A6C009FD251 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7831225F18835A6C009FD251 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,8 +63,6 @@
 		7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		78AEA9101895FB850088AE3A /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		78AEA9111895FB850088AE3A /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
-		78AEA913189602B30088AE3A /* FriendImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendImageViewController.h; sourceTree = "<group>"; };
-		78AEA914189602B30088AE3A /* FriendImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +130,10 @@
 				7831227218835A6C009FD251 /* Main_iPad.storyboard */,
 				7831227518835A6C009FD251 /* ViewController.h */,
 				7831227618835A6C009FD251 /* ViewController.m */,
-				78AEA913189602B30088AE3A /* FriendImageViewController.h */,
-				78AEA914189602B30088AE3A /* FriendImageViewController.m */,
 				78AEA9101895FB850088AE3A /* ShareViewController.h */,
 				78AEA9111895FB850088AE3A /* ShareViewController.m */,
+				7819E62F18B19EC6001791A2 /* requestViewController.h */,
+				7819E63018B19EC6001791A2 /* requestViewController.m */,
 				7831227818835A6C009FD251 /* Images.xcassets */,
 				7831226418835A6C009FD251 /* Supporting Files */,
 			);
@@ -268,8 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7831227718835A6C009FD251 /* ViewController.m in Sources */,
-				78AEA915189602B30088AE3A /* FriendImageViewController.m in Sources */,
 				7831226E18835A6C009FD251 /* AppDelegate.m in Sources */,
+				7819E63118B19EC6001791A2 /* requestViewController.m in Sources */,
 				78AEA9121895FB850088AE3A /* ShareViewController.m in Sources */,
 				7831226A18835A6C009FD251 /* main.m in Sources */,
 			);
