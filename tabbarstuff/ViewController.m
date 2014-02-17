@@ -10,53 +10,84 @@
 
 
 @interface ViewController (){
-    NSArray *tabArray;
-    NSArray *viewArray;
+    
 }
 
 @end
 
 @implementation ViewController
 
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    //NSLog(@"didSelectItem: %d", item.tag);
-    [self activateView:item.tag];
-}
+
 
 - (void)viewDidLoad
 {
-    self.myTabBar.delegate = self;
-    UIImage *tabBarBackground = [UIImage imageNamed:@"tabBarBackground.png"];
-    UIImage *tabBarSelectedItem = [UIImage imageNamed:@"tabBarSelectedItem.png"];
-    [self.myTabBar setBackgroundImage:tabBarBackground];
-    [self.myTabBar setSelectionIndicatorImage:tabBarSelectedItem];
-    [self.myTabBar setSelectedItem:self.item1];
     
     
-    tabArray = [[NSArray alloc] initWithObjects:_item1,_item2,_item3, nil];
-    viewArray = [[NSArray alloc] initWithObjects:_friendsView, _tournamentView, _statsView, nil];
-    [self activateView:_friendsView.tag];
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info"]];
+    // Align the button in the center horizontally
+    loginView.delegate = self;
+    loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), 0);
+    
+    loginView.center = self.view.center;
+    
+    [self.view addSubview:loginView];
+
 }
 
-- (void)activateView:(NSInteger) index{
-    for (NSInteger i=0; i<viewArray.count; i++) {
-        UIView *view = [viewArray objectAtIndex:i];
-        if (i==index) {
-            [view setHidden:NO];
-        }
-        else{
-            [view setHidden:YES];
-        }
-    }
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
+                            user:(id<FBGraphUser>)user {
+    self.profilePictureView.profileID = user.id;
+    self.nameLabel.text = user.name;
+    
 }
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    self.statusLabel.text = @"You're logged in as";
+    
+}
+
+// Implement the loginViewShowingLoggedOutUser: delegate method to modify your app's UI for a logged-out user experience
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
+    self.nameLabel.text = @"";
+    self.statusLabel.text= @"You're not logged in";
+    self.profilePictureView.profileID = nil;
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
+    NSString *alertMessage, *alertTitle;
+    
+    if ([FBErrorUtility shouldNotifyUserForError:error]) {
+        alertTitle = @"Facebook error";
+        alertMessage = [FBErrorUtility userMessageForError:error];
+        
+    } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryAuthenticationReopenSession) {
+        alertTitle = @"Session Error";
+        alertMessage = @"Your current session is no longer valid. Please log in again.";
+        
+    } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
+        NSLog(@"user cancelled login");
+        
+    } else {
+        alertTitle  = @"Something went wrong";
+        alertMessage = @"Please try again later.";
+        NSLog(@"Unexpected error:%@", error);
+    }
+    
+    if (alertMessage) {
+        [[[UIAlertView alloc] initWithTitle:alertTitle
+                                    message:alertMessage
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+    }
 }
 
 @end

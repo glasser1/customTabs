@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7819E63118B19EC6001791A2 /* requestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7819E63018B19EC6001791A2 /* requestViewController.m */; };
 		7831225E18835A6C009FD251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831225D18835A6C009FD251 /* Foundation.framework */; };
 		7831226018835A6C009FD251 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831225F18835A6C009FD251 /* CoreGraphics.framework */; };
 		7831226218835A6C009FD251 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831226118835A6C009FD251 /* UIKit.framework */; };
@@ -22,10 +23,8 @@
 		7831228218835A6C009FD251 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831226118835A6C009FD251 /* UIKit.framework */; };
 		7831228A18835A6C009FD251 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7831228818835A6C009FD251 /* InfoPlist.strings */; };
 		7831228C18835A6C009FD251 /* tabbarstuffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7831228B18835A6C009FD251 /* tabbarstuffTests.m */; };
-		7831229818835D45009FD251 /* tabBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831229618835D45009FD251 /* tabBarBackground.png */; };
-		7831229A188360BF009FD251 /* tabBarSelectedItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 78312299188360BF009FD251 /* tabBarSelectedItem.png */; };
-		7831229C18836376009FD251 /* friends2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831229B18836376009FD251 /* friends2.png */; };
 		7885ECF4188DFB9100CAC1EA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */; };
+		78AEA9121895FB850088AE3A /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AEA9111895FB850088AE3A /* ShareViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7819E62F18B19EC6001791A2 /* requestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requestViewController.h; sourceTree = "<group>"; };
+		7819E63018B19EC6001791A2 /* requestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requestViewController.m; sourceTree = "<group>"; };
 		7831225A18835A6C009FD251 /* tabbarstuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabbarstuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7831225D18835A6C009FD251 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7831225F18835A6C009FD251 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,10 +60,9 @@
 		7831228718835A6C009FD251 /* tabbarstuffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tabbarstuffTests-Info.plist"; sourceTree = "<group>"; };
 		7831228918835A6C009FD251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7831228B18835A6C009FD251 /* tabbarstuffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbarstuffTests.m; sourceTree = "<group>"; };
-		7831229618835D45009FD251 /* tabBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarBackground.png; sourceTree = "<group>"; };
-		78312299188360BF009FD251 /* tabBarSelectedItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarSelectedItem.png; sourceTree = "<group>"; };
-		7831229B18836376009FD251 /* friends2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends2.png; sourceTree = "<group>"; };
 		7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		78AEA9101895FB850088AE3A /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		78AEA9111895FB850088AE3A /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,15 +124,16 @@
 		7831226318835A6C009FD251 /* tabbarstuff */ = {
 			isa = PBXGroup;
 			children = (
-				78312299188360BF009FD251 /* tabBarSelectedItem.png */,
-				7831229B18836376009FD251 /* friends2.png */,
-				7831229618835D45009FD251 /* tabBarBackground.png */,
 				7831226C18835A6C009FD251 /* AppDelegate.h */,
 				7831226D18835A6C009FD251 /* AppDelegate.m */,
 				7831226F18835A6C009FD251 /* Main_iPhone.storyboard */,
 				7831227218835A6C009FD251 /* Main_iPad.storyboard */,
 				7831227518835A6C009FD251 /* ViewController.h */,
 				7831227618835A6C009FD251 /* ViewController.m */,
+				78AEA9101895FB850088AE3A /* ShareViewController.h */,
+				78AEA9111895FB850088AE3A /* ShareViewController.m */,
+				7819E62F18B19EC6001791A2 /* requestViewController.h */,
+				7819E63018B19EC6001791A2 /* requestViewController.m */,
 				7831227818835A6C009FD251 /* Images.xcassets */,
 				7831226418835A6C009FD251 /* Supporting Files */,
 			);
@@ -245,12 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7831227418835A6C009FD251 /* Main_iPad.storyboard in Resources */,
-				7831229A188360BF009FD251 /* tabBarSelectedItem.png in Resources */,
 				7831227918835A6C009FD251 /* Images.xcassets in Resources */,
 				7831227118835A6C009FD251 /* Main_iPhone.storyboard in Resources */,
 				7831226818835A6C009FD251 /* InfoPlist.strings in Resources */,
-				7831229818835D45009FD251 /* tabBarBackground.png in Resources */,
-				7831229C18836376009FD251 /* friends2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +269,8 @@
 			files = (
 				7831227718835A6C009FD251 /* ViewController.m in Sources */,
 				7831226E18835A6C009FD251 /* AppDelegate.m in Sources */,
+				7819E63118B19EC6001791A2 /* requestViewController.m in Sources */,
+				78AEA9121895FB850088AE3A /* ShareViewController.m in Sources */,
 				7831226A18835A6C009FD251 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +415,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tabbarstuff/tabbarstuff-Prefix.pch";
 				INFOPLIST_FILE = "tabbarstuff/tabbarstuff-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
