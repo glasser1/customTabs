@@ -24,13 +24,33 @@
     return self;
 }
 
+- (NSDictionary *)parseURLParams:(NSString *)query
+{
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    for (NSString *pair in pairs)
+    {
+        NSArray *kv = [pair componentsSeparatedByString:@"="];
+        
+        [params setObject:[[kv objectAtIndex:1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+                   forKey:[[kv objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    }
+    
+    return params;
+}
+
 - (void)viewDidLoad
 {
     
-    //code to invite users to join the app.....except it isn't working.  haha.  don't know why yet.
     
-    /*NSMutableDictionary* params =   [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                     @"17508335", @"to", // Eric
+    
+////////////////////////NOT WORKING CODE/////////////////////////////////////
+    
+    
+    //code to invite users to join the app.....except it isn't working.  haha.  don't know why yet.
+    /*
+    NSMutableDictionary* params =   [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     @"17508335", @"to", // user ID - in this case, Eric
                                      nil];
     
     [FBWebDialogs presentRequestsDialogModallyWithSession:nil
@@ -50,9 +70,55 @@
                                                           }
                                                       }}
                                               friendCache:nil];
-     */
+    */
     
     
+    NSDictionary *parameters = @{@"to":@"17508335"};
+    
+    [FBWebDialogs presentRequestsDialogModallyWithSession:nil
+                                                  message:[NSString stringWithFormat:@"You've received an challenge at Piste+Off!"]
+                                                    title:nil
+                                               parameters:parameters
+                                                  handler:^(FBWebDialogResult result, NSURL *resultURL, NSError *error)
+     {
+         if(error)
+         {
+             NSLog(@"Some errorr: %@", [error description]);
+             UIAlertView *alrt = [[UIAlertView alloc] initWithTitle:@"Invitiation Sending Failed" message:@"Unable to send inviation at this Moment, please make sure your are connected with internet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+             [alrt show];
+         }
+         else
+         {
+             if (![resultURL query])
+             {
+                 return;
+             }
+             
+             NSDictionary *params = [self parseURLParams:[resultURL query]];
+             NSMutableArray *recipientIDs = [[NSMutableArray alloc] init];
+             for (NSString *paramKey in params)
+             {
+                 if ([paramKey hasPrefix:@"to["])
+                 {
+                     [recipientIDs addObject:[params objectForKey:paramKey]];
+                 }
+             }
+             if ([params objectForKey:@"request"])
+             {
+                 NSLog(@"Request ID: %@", [params objectForKey:@"request"]);
+             }
+             if ([recipientIDs count] > 0)
+             {
+                 //[self showMessage:@"Sent request successfully."];
+                 //NSLog(@"Recipient ID(s): %@", recipientIDs);
+                 UIAlertView *alrt = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Invitation(s) sent successfuly!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                 [alrt show];
+             }
+             
+         }
+     }friendCache:nil];
+
+///////////////////////WORKING CODE////////////////////////////////////////
     
     //code to get all friends
     
@@ -69,7 +135,7 @@
     }];
      */
     
-    
+    /*
     
     //code to get friends that have the app.  maybe use this to "challenge" instead of invite.  to get friends that DON"T have the app, change the is_app_user = 1 to 0
     
@@ -86,7 +152,7 @@
         NSLog(@"Friends with app: %@", result);
     }];
 
-    
+    */
 
     
     [super viewDidLoad];
