@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface requestViewController : UIViewController
-- (NSDictionary *)parseURLParams:(NSString *)query;
 
 @end
