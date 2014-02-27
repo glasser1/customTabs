@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3615887618BED75000280B42 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3615887518BED75000280B42 /* FacebookSDK.framework */; };
 		7819E63118B19EC6001791A2 /* requestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7819E63018B19EC6001791A2 /* requestViewController.m */; };
 		7831225E18835A6C009FD251 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831225D18835A6C009FD251 /* Foundation.framework */; };
 		7831226018835A6C009FD251 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831225F18835A6C009FD251 /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		7831228218835A6C009FD251 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7831226118835A6C009FD251 /* UIKit.framework */; };
 		7831228A18835A6C009FD251 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7831228818835A6C009FD251 /* InfoPlist.strings */; };
 		7831228C18835A6C009FD251 /* tabbarstuffTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7831228B18835A6C009FD251 /* tabbarstuffTests.m */; };
-		7885ECF4188DFB9100CAC1EA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */; };
 		78AEA9121895FB850088AE3A /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AEA9111895FB850088AE3A /* ShareViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3615887518BED75000280B42 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7819E62F18B19EC6001791A2 /* requestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = requestViewController.h; sourceTree = "<group>"; };
 		7819E63018B19EC6001791A2 /* requestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = requestViewController.m; sourceTree = "<group>"; };
 		7831225A18835A6C009FD251 /* tabbarstuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabbarstuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +61,6 @@
 		7831228718835A6C009FD251 /* tabbarstuffTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tabbarstuffTests-Info.plist"; sourceTree = "<group>"; };
 		7831228918835A6C009FD251 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7831228B18835A6C009FD251 /* tabbarstuffTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tabbarstuffTests.m; sourceTree = "<group>"; };
-		7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		78AEA9101895FB850088AE3A /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		78AEA9111895FB850088AE3A /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,7 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7831226018835A6C009FD251 /* CoreGraphics.framework in Frameworks */,
-				7885ECF4188DFB9100CAC1EA /* FacebookSDK.framework in Frameworks */,
+				3615887618BED75000280B42 /* FacebookSDK.framework in Frameworks */,
 				7831226218835A6C009FD251 /* UIKit.framework in Frameworks */,
 				7831225E18835A6C009FD251 /* Foundation.framework in Frameworks */,
 			);
@@ -112,7 +112,7 @@
 		7831225C18835A6C009FD251 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7885ECF3188DFB9100CAC1EA /* FacebookSDK.framework */,
+				3615887518BED75000280B42 /* FacebookSDK.framework */,
 				7831225D18835A6C009FD251 /* Foundation.framework */,
 				7831225F18835A6C009FD251 /* CoreGraphics.framework */,
 				7831226118835A6C009FD251 /* UIKit.framework */,
@@ -411,6 +411,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/itadmin/Desktop/tabbarstuff,
+					/Users/einternicola/code/customTabs,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tabbarstuff/tabbarstuff-Prefix.pch";
@@ -429,6 +430,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/itadmin/Desktop/tabbarstuff,
+					/Users/einternicola/code/customTabs,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tabbarstuff/tabbarstuff-Prefix.pch";

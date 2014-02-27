@@ -9,6 +9,10 @@
 #import "requestViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 
+#define BOSS_CAT @"100002171073663"
+#define TEST_USER @"100007922251250"
+#define ERIC_I @"17508335"
+
 @interface requestViewController ()
 
 @end
@@ -73,7 +77,7 @@
     */
     
     
-    NSDictionary *parameters = @{@"to":@"17508335"};
+    NSDictionary *parameters = @{@"to":TEST_USER};
     
     [FBWebDialogs presentRequestsDialogModallyWithSession:nil
                                                   message:[NSString stringWithFormat:@"You've received an challenge at Piste+Off!"]
@@ -121,7 +125,6 @@
 ///////////////////////WORKING CODE////////////////////////////////////////
     
     //code to get all friends
-    
     /*
      FBRequest* friendsRequest = [FBRequest requestForMyFriends];
     [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
@@ -133,7 +136,7 @@
             NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
         }
     }];
-     */
+    */
     
     /*
     
